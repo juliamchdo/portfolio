@@ -4,15 +4,28 @@
       Olá! eu sou <span class="title-name">Júlia Machado</span>
     </h1>
     <h2 class="subtitle">Desenvolvedora Front End</h2>
+    <div class="buttons">
+      <VButtonVue
+        v-for="(button, i) in buttonProps"
+        :key="i"
+        :icon="button.icon"
+        :link="button.link"
+      />
+    </div>
   </q-layout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import VButtonVue from './V-Button.vue';
 
-export default defineComponent({
-  name: 'ContactInfo',
-});
+const buttonProps = [
+  { icon: 'fa-brands fa-github', link: 'https://github.com/juliamchdo' },
+  {
+    icon: 'fa-brands fa-linkedin-in',
+    link: 'https://www.linkedin.com/in/juliamchdo/',
+  },
+  { icon: 'fa-solid fa-envelope', link: 'mailto:juliamachado.dev@gmail.com' },
+];
 </script>
 
 <style lang="scss">
@@ -37,5 +50,10 @@ export default defineComponent({
     font-size: 2.2rem;
     font-weight: 400;
   }
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  z-index: 9;
 }
 </style>
