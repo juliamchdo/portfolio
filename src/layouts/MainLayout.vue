@@ -1,10 +1,17 @@
 <template>
-  <div id="particles-js"></div>
-  <span class="js-count-particles">--</span> particles
+  <q-layout class="raleway">
+    <div id="particles-js"></div>
+    <ContactInfo />
+  </q-layout>
 </template>
 
 <script>
+import ContactInfo from '../../src/components/ContactInfo.vue';
 export default {
+  components: {
+    ContactInfo,
+  },
+
   mounted() {
     this.$nextTick(() => {
       particlesJS('particles-js', {
@@ -23,7 +30,7 @@ export default {
             anim: { enable: true, speed: 1, opacity_min: 0, sync: false },
           },
           size: {
-            value: 3,
+            value: 4,
             random: true,
             anim: { enable: false, speed: 4, size_min: 0.3, sync: false },
           },
@@ -34,6 +41,7 @@ export default {
             opacity: 0.4,
             width: 1,
           },
+
           move: {
             enable: true,
             speed: 1,
@@ -68,7 +76,9 @@ export default {
         },
         retina_detect: true,
       });
-      let count_particles, stats, update = null;
+      let count_particles,
+        stats,
+        update = null;
       stats = new Stats();
       stats.setMode(0);
       stats.domElement.style.position = 'absolute';
@@ -95,5 +105,6 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import '../../src/css/particles.scss';
 </style>
