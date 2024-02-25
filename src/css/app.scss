@@ -1,7 +1,7 @@
 // app global css in SCSS form
-
 html {
   font-size: 62.5%;
+  color: white;
 }
 
 h1,
@@ -13,7 +13,20 @@ h5 {
   padding: 0;
 }
 .q-layout {
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #09090a;
+}
+
+.container {
+  margin-bottom: 10rem;
+
+  .title {
+    margin-bottom: 2rem;
+  }
 }
 
 .raleway {

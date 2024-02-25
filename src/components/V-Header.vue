@@ -1,6 +1,6 @@
 <template>
   <q-layout class="contact-info">
-    <h1 class="title">
+    <h1 class="header-title">
       Olá! eu sou <span class="title-name">Júlia Machado</span>
     </h1>
     <h2 class="subtitle">Desenvolvedora Front End</h2>
@@ -35,7 +35,7 @@ const buttonProps = [
   align-items: center;
   justify-content: center;
 
-  .title {
+  .header-title {
     color: #fff;
     text-align: center;
     font-size: 5rem;
