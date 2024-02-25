@@ -23,8 +23,13 @@ h5 {
 
 .container {
   margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 
   .title {
+    text-align: center;
     margin-bottom: 2rem;
   }
 }

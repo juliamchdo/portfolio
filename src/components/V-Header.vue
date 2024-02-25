@@ -10,6 +10,7 @@
         :key="i"
         :icon="button.icon"
         :link="button.link"
+        type="stack"
       />
     </div>
   </q-layout>
