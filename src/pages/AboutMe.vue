@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="about-me">
     <h2 class="title">Sobre mim</h2>
     <p class="about-me">
       Após aproximadamente três anos de dedicação como professora de Inglês,

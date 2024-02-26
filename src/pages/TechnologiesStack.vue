@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="technologies">
     <h2 class="title">Tecnologias</h2>
 
     <div class="nav-buttons">
@@ -61,8 +61,6 @@ const technologies: Technologies[] = [
   { name: 'PostgreSQL', icon: 'postgresql', group: 'database' },
   { name: 'DBeaver', icon: 'dbeaver', group: 'database' },
   { name: 'Prisma', icon: 'prisma', group: 'back-end' },
-  { name: 'Github', icon: 'github', group: 'version-control' },
-  { name: 'Gitlab', icon: 'gitlab', group: 'version-control' },
   { name: 'Git', icon: 'git', group: 'version-control' },
   { name: 'Cypress', icon: 'cypress', group: 'tests' },
   { name: 'Jest', icon: 'jest', group: 'tests' },
