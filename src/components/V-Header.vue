@@ -17,7 +17,7 @@
       </h1>
       <h2 class="subtitle">Desenvolvedora Front End</h2>
       <div class="buttons">
-        <VButtonVue
+        <VButton
           v-for="(button, i) in buttonProps"
           :key="i"
           :icon="button.icon"
