@@ -4,6 +4,7 @@
     <VHeader />
     <AboutMe />
     <TechnologiesStack />
+    <ProjectCards />
   </q-layout>
 </template>
 
@@ -11,5 +12,6 @@
 import VHeader from 'src/components/V-Header.vue';
 import VParticles from 'src/components/V-Particles.vue';
 import AboutMe from 'src/pages/AboutMe.vue';
+import ProjectCards from 'src/pages/ProjectCards.vue';
 import TechnologiesStack from 'src/pages/TechnologiesStack.vue';
 </script>

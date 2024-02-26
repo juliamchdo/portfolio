@@ -26,13 +26,9 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  icon: String,
-  link: String,
-  type: String,
-  label: String,
-});
+import { ButtonProps } from 'src/types/v-button';
 
+const props = defineProps<ButtonProps>();
 const imgSource: string = 'src/assets/icons/' + props.icon + '.png';
 </script>
 
