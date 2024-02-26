@@ -53,7 +53,6 @@ const navItems: NavItems[] = [
 ];
 
 const scrollToView = (navItem: NavItems) => {
-  console.log(navItem);
   const section = document.querySelector(`#${navItem.id}`);
   section?.scrollIntoView({ behavior: 'smooth' });
 };
