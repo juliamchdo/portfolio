@@ -74,7 +74,6 @@ const handleNavButtons = (id: string) => {
 <style lang="scss" scoped>
 .tech-group {
   width: 80%;
-  height: 400px;
   z-index: 2;
   display: flex;
   align-items: flex-start;
