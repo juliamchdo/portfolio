@@ -9,11 +9,14 @@
           <div class="text-caption text-grey">
             {{ project.legend }}
           </div>
+          <div class="tags">
+            <VTag v-for="(tag, i ) in project.tags" :key="i" :text="tag.text" :color="tag.color"/>
+          </div>
         </q-card-section>
 
         <q-card-actions>
-          <q-btn :href="project.github" target="_blank" flat color="primary" label="Github" />
-          <q-btn v-if="project.site" :href="project.site" target="_blank" flat color="secondary" label="Ir para site" />
+          <q-btn :href="project.github" target="_blank" flat color="deep-purple" label="Github" />
+          <q-btn v-if="project.site" :href="project.site" target="_blank" flat color="white" label="Ir para site" />
 
           <q-space />
         </q-card-actions>
@@ -24,6 +27,7 @@
 
 <script setup lang="ts">
 import { ProjectItems } from 'src/types/project-cards';
+import  VTag from 'src/components/V-Tag.vue'
 
 const projectItems: ProjectItems[] = [
   {
@@ -33,10 +37,10 @@ const projectItems: ProjectItems[] = [
     site: 'https://holambra.vercel.app/',
     image: 'src/assets/images/holambra.jpeg',
     tags: [
-      { text: 'Angular', color: '#FF7043' },
-      { text: 'Typescript', color: '#26C6DA' },
-      { text: 'Scss', color: '#EC407A' },
-      { text: 'HTML', color: '#FFA726' },
+      { text: 'Angular', color: 'red' },
+      { text: 'Typescript', color: 'light-blue' },
+      { text: 'Scss', color: 'pink' },
+      { text: 'HTML', color: 'yellow' },
     ]
   },
   {
@@ -46,11 +50,11 @@ const projectItems: ProjectItems[] = [
     site: 'https://dra-natalia-bittencourt.netlify.app/',
     image: 'src/assets/images/dra-natalia.jpeg',
     tags: [
-      { text: 'React', color: '#42A5F5' },
-      { text: 'Next.js', color: '#78909C' },
-      { text: 'Typescript', color: '#26C6DA' },
-      { text: 'Scss', color: '#EC407A' },
-      { text: 'HTML', color: '#FFA726' },
+      { text: 'React', color: 'blue' },
+      { text: 'Next.js', color: 'black' },
+      { text: 'Typescript', color: 'light-blue' },
+      { text: 'Scss', color: 'pink' },
+      { text: 'HTML', color: 'yellow' },
     ]
   },
   {
@@ -60,18 +64,29 @@ const projectItems: ProjectItems[] = [
     site: 'https://aladdin-task-manager.netlify.app/',
     image: 'src/assets/images/aladdin.jpeg',
     tags: [
-      { text: 'React', color: '#42A5F5' },
-      { text: 'Typescript', color: '#26C6DA' },
-      { text: 'Tailwind', color: '#29B6F6' },
-      { text: 'Axios', color: '#26C6DA' },
-      { text: 'Chackra UI', color: '#29B6F6' },
-      { text: 'Radix', color: '#AB47BC' },
-      { text: 'Scss', color: '#EC407A' },
-      { text: 'HTML', color: '#FFA726' },
-      { text: 'Prisma', color: '#78909C' },
-      { text: 'PostgreSQL', color: '#FFCA28' },
-      { text: 'Fastify', color: '#607D8B' },
+      { text: 'React', color: 'blue' },
+      { text: 'Typescript', color: 'light-blue' },
+      { text: 'Tailwind', color: 'cyan' },
+      { text: 'Axios', color: 'blue' },
+      { text: 'Scss', color: 'pink' },
+      { text: 'HTML', color: 'yellow' },
+      { text: 'Prisma', color: 'purple' },
+      { text: 'PostgreSQL', color: 'orange' },
+      { text: 'Fastify', color: 'purple' },
     ]
+  },
+  {
+    title: 'MKS Sistemas',
+    legend: 'Desafio Front End para consumir uma API de lista de produtos, estilo e-commerce.',
+    github: 'https://github.com/juliamchdo/product-challenge',
+    site: 'https://mks-product-challenge.netlify.app/',
+    image: 'src/assets/images/mks.png',
+    tags: [
+      { text: 'React', color: 'blue' },
+      { text: 'Typescript', color: 'light-blue' },
+      { text: 'Axios', color: 'blue' },
+      { text: 'Styled components', color: 'pink' },
+    ],
   },
   {
     title: 'FinanceLAB',
@@ -79,18 +94,36 @@ const projectItems: ProjectItems[] = [
     github: 'https://github.com/juliamchdo/finance-lab-mobile',
     image: '',
     tags: [
-      { text: 'React', color: '#42A5F5' },
-      { text: 'Typescript', color: '#26C6DA' },
-      { text: 'Axios', color: '#26C6DA' },
+      { text: 'React Native', color: 'blue' },
+      { text: 'Typescript', color: 'light-blue' },
+      { text: 'Axios', color: 'blue' },
+    ],
+  },
+  {
+    title: 'BeerShop',
+    legend: 'Com muito carinho, esse foi o primeiro site que desenvolvi, logo que comecei a estudar programação.',
+    github: 'https://github.com/juliamchdo/cervejaria',
+    site: 'https://juliamchdo.github.io/cervejaria/',
+    image: 'src/assets/images/beer.png',
+    tags: [
+      { text: 'HTML', color: 'yellow' },
+      { text: 'CSS', color: 'light-blue' },
     ],
   },
 ]
 </script>
 
 <style lang="scss" scoped>
-  .q-img {
-    height: 150px !important;
-  }
+.q-img {
+  height: 150px !important;
+}
+
+.q-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card {
   display: flex;
   justify-content: center;
@@ -98,13 +131,21 @@ const projectItems: ProjectItems[] = [
   .my-card {
     width: 100%;
     max-width: 350px;
-    max-height: 290px;
+    height: 350px;
     border: 1px solid #8234e9;
     background-color: #3f3f41;
 
+    .tags{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: .5rem;
+      margin-top: 1rem;
+    }
 
     .text-caption {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 }
