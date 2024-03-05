@@ -34,7 +34,7 @@ import { ButtonProps } from 'src/types/v-button';
 const props = withDefaults(defineProps<ButtonProps>(), {
   color: 'default'
 });
-const imgSource: string = 'src/assets/icons/' + props.icon + '.png';
+const imgSource: string = props?.icon || '';
 </script>
 
 <style lang="scss" scoped>

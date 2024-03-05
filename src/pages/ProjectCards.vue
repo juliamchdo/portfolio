@@ -29,6 +29,10 @@
 import { ProjectItems } from 'src/types/project-cards';
 import  VTag from 'src/components/V-Tag.vue'
 import mks from 'src/assets/images/mks.png'
+import beer from 'src/assets/images/beer.png'
+import holambra from 'src/assets/images/holambra.jpeg'
+import draNatalia from 'src/assets/images/dra-natalia.jpeg'
+import aladdin from 'src/assets/images/aladdin.jpeg'
 
 const projectItems: ProjectItems[] = [
   {
@@ -36,7 +40,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Landing page com o intuito de praticar Reactive Forms do Angular.',
     github: 'https://github.com/juliamchdo/holambra',
     site: 'https://holambra.vercel.app/',
-    image: 'src/assets/images/holambra.jpeg',
+    image: holambra,
     tags: [
       { text: 'Angular', color: 'red' },
       { text: 'Typescript', color: 'light-blue' },
@@ -49,7 +53,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Landing page para divulgação de uma clínica médica.',
     github: 'https://github.com/juliamchdo/dra-natalia',
     site: 'https://dra-natalia-bittencourt.netlify.app/',
-    image: 'src/assets/images/dra-natalia.jpeg',
+    image: draNatalia,
     tags: [
       { text: 'React', color: 'blue' },
       { text: 'Next.js', color: 'black' },
@@ -63,7 +67,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Gerenciador de tarefas desenvolvido para uma disciplina da faculdade.',
     github: 'https://github.com/juliamchdo/aladdin-web',
     site: 'https://aladdin-task-manager.netlify.app/',
-    image: 'src/assets/images/aladdin.jpeg',
+    image: aladdin,
     tags: [
       { text: 'React', color: 'blue' },
       { text: 'Typescript', color: 'light-blue' },
@@ -94,7 +98,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Com muito carinho, esse foi o primeiro site que desenvolvi, logo que comecei a estudar programação.',
     github: 'https://github.com/juliamchdo/cervejaria',
     site: 'https://juliamchdo.github.io/cervejaria/',
-    image: 'src/assets/images/beer.png',
+    image: beer,
     tags: [
       { text: 'HTML', color: 'yellow' },
       { text: 'CSS', color: 'light-blue' },
