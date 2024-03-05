@@ -13,9 +13,12 @@
 
     <q-btn
       v-if="props.type === 'flat'"
-      class="flat"
+      :class="`flat ` + props.color"
       flat
+      :href="props.link"
+      target="_blank"
       :label="props.label"
+      :icon="props.icon"
     />
 
     <button v-if="props.type === 'teal'" class="teal-button">
@@ -28,7 +31,9 @@
 <script setup lang="ts">
 import { ButtonProps } from 'src/types/v-button';
 
-const props = defineProps<ButtonProps>();
+const props = withDefaults(defineProps<ButtonProps>(), {
+  color: 'default'
+});
 const imgSource: string = 'src/assets/icons/' + props.icon + '.png';
 </script>
 
@@ -37,8 +42,15 @@ const imgSource: string = 'src/assets/icons/' + props.icon + '.png';
   z-index: 2;
   font-weight: 600;
   .flat {
-    color: #8234e9;
     font-weight: 700;
+  }
+
+  .default{
+    color: #8234e9;
+  }
+
+  .white{
+    color: white;
   }
 
   .teal-button {

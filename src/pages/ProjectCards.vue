@@ -89,17 +89,6 @@ const projectItems: ProjectItems[] = [
     ],
   },
   {
-    title: 'FinanceLAB',
-    legend: 'Aplicativo para gerenciamneto de valores de entrada e saída.',
-    github: 'https://github.com/juliamchdo/finance-lab-mobile',
-    image: '',
-    tags: [
-      { text: 'React Native', color: 'blue' },
-      { text: 'Typescript', color: 'light-blue' },
-      { text: 'Axios', color: 'blue' },
-    ],
-  },
-  {
     title: 'BeerShop',
     legend: 'Com muito carinho, esse foi o primeiro site que desenvolvi, logo que comecei a estudar programação.',
     github: 'https://github.com/juliamchdo/cervejaria',
@@ -132,7 +121,7 @@ const projectItems: ProjectItems[] = [
     width: 100%;
     max-width: 350px;
     height: 350px;
-    border: 1px solid #8234e9;
+    border: 1px solid #3f3f41;
     background-color: #3f3f41;
 
     .tags{
