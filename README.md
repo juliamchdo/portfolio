@@ -1,6 +1,8 @@
-# portfolio (portfolio)
+# Júlia Machado - Front End Developer
 
-A Quasar Project
+Developed using Vue.js 3 and Quasar Framework, this portfolio is a brief introduction about me, highlighting the technologies in which I have experience and knowledge, as well as showcasing some of the projects I have already developed.
+
+https://julia-machado.netlify.app/#/
 
 ## Install the dependencies
 ```bash
@@ -31,12 +33,8 @@ npm run format
 ```
 
 
-
 ### Build the app for production
 ```bash
 quasar build
 ```
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
-# portfolio
