@@ -1,0 +1,9 @@
+[[redirects]]
+from = "/images/*"
+to = "/src/assets/images/:splat"
+status = 200
+
+[[redirects]]
+from = "/icons/*"
+to = "/src/assets/icons/:splat"
+status = 200
