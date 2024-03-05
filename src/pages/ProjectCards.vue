@@ -28,6 +28,7 @@
 <script setup lang="ts">
 import { ProjectItems } from 'src/types/project-cards';
 import  VTag from 'src/components/V-Tag.vue'
+import mks from 'src/assets/images/mks.png'
 
 const projectItems: ProjectItems[] = [
   {
@@ -80,7 +81,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Desafio Front End para consumir uma API de lista de produtos, estilo e-commerce.',
     github: 'https://github.com/juliamchdo/product-challenge',
     site: 'https://mks-product-challenge.netlify.app/',
-    image: 'src/assets/images/mks.png',
+    image: mks,
     tags: [
       { text: 'React', color: 'blue' },
       { text: 'Typescript', color: 'light-blue' },
