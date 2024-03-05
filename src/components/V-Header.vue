@@ -48,8 +48,7 @@ const buttonProps: ButtonProps[] = [
 const navItems: NavItems[] = [
   { label: 'Sobre mim', id: 'about-me' },
   { label: 'Tecnologias', id: 'technologies' },
-  { label: 'Projetos', id: 'projects' },
-  { label: 'Contato', id: 'contact' },
+  { label: 'Projetos', id: 'projects' }
 ];
 
 const scrollToView = (navItem: NavItems) => {
