@@ -35,7 +35,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Landing page com o intuito de praticar Reactive Forms do Angular.',
     github: 'https://github.com/juliamchdo/holambra',
     site: 'https://holambra.vercel.app/',
-    image: 'src/assets/holambra.jpeg',
+    image: 'src/assets/images/holambra.jpeg',
     tags: [
       { text: 'Angular', color: 'red' },
       { text: 'Typescript', color: 'light-blue' },
@@ -48,7 +48,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Landing page para divulgação de uma clínica médica.',
     github: 'https://github.com/juliamchdo/dra-natalia',
     site: 'https://dra-natalia-bittencourt.netlify.app/',
-    image: 'src/assets/dra-natalia.jpeg',
+    image: 'src/assets/images/dra-natalia.jpeg',
     tags: [
       { text: 'React', color: 'blue' },
       { text: 'Next.js', color: 'black' },
@@ -62,7 +62,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Gerenciador de tarefas desenvolvido para uma disciplina da faculdade.',
     github: 'https://github.com/juliamchdo/aladdin-web',
     site: 'https://aladdin-task-manager.netlify.app/',
-    image: 'src/assets/aladdin.jpeg',
+    image: 'src/assets/images/aladdin.jpeg',
     tags: [
       { text: 'React', color: 'blue' },
       { text: 'Typescript', color: 'light-blue' },
@@ -80,7 +80,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Desafio Front End para consumir uma API de lista de produtos, estilo e-commerce.',
     github: 'https://github.com/juliamchdo/product-challenge',
     site: 'https://mks-product-challenge.netlify.app/',
-    image: 'src/assets/mks.png',
+    image: 'src/assets/images/mks.png',
     tags: [
       { text: 'React', color: 'blue' },
       { text: 'Typescript', color: 'light-blue' },
@@ -93,7 +93,7 @@ const projectItems: ProjectItems[] = [
     legend: 'Com muito carinho, esse foi o primeiro site que desenvolvi, logo que comecei a estudar programação.',
     github: 'https://github.com/juliamchdo/cervejaria',
     site: 'https://juliamchdo.github.io/cervejaria/',
-    image: 'src/assets/beer.png',
+    image: 'src/assets/images/beer.png',
     tags: [
       { text: 'HTML', color: 'yellow' },
       { text: 'CSS', color: 'light-blue' },
