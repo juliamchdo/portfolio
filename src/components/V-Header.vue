@@ -69,10 +69,19 @@ const scrollToView = (navItem: NavItems) => {
     list-style: none;
     display: flex;
     align-items: center;
+    padding: 0;
     gap: 2rem;
     .navigation-item {
       font-size: 1.8rem;
       z-index: 2;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navigation{
+     flex-wrap: wrap;
+     justify-content: center;
+      gap: 0;
     }
   }
 
