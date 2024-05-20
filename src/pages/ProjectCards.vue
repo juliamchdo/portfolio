@@ -2,7 +2,13 @@
   <div class="container" id="projects">
     <h2 class="title">Projetos</h2>
     <div class="card q-pa-md row items-start q-gutter-md" style="z-index: 2">
-      <q-card class="my-card" flat bordered v-for="(project, i) in projectItems" :key="i">
+      <q-card
+        class="my-card"
+        flat
+        bordered
+        v-for="(project, i) in projectItems"
+        :key="i"
+      >
         <q-img :src="`${project.image}`" />
         <q-card-section>
           <div class="text-h5 q-mt-sm q-mb-xs">{{ project.title }}</div>
@@ -10,13 +16,31 @@
             {{ project.legend }}
           </div>
           <div class="tags">
-            <VTag v-for="(tag, i ) in project.tags" :key="i" :text="tag.text" :color="tag.color"/>
+            <VTag
+              v-for="(tag, i) in project.tags"
+              :key="i"
+              :text="tag.text"
+              :color="tag.color"
+            />
           </div>
         </q-card-section>
 
         <q-card-actions>
-          <q-btn :href="project.github" target="_blank" flat color="deep-purple" label="Github" />
-          <q-btn v-if="project.site" :href="project.site" target="_blank" flat color="white" label="Ir para site" />
+          <q-btn
+            :href="project.github"
+            target="_blank"
+            flat
+            color="deep-purple"
+            label="Github"
+          />
+          <q-btn
+            v-if="project.site"
+            :href="project.site"
+            target="_blank"
+            flat
+            color="white"
+            label="Ir para site"
+          />
 
           <q-space />
         </q-card-actions>
@@ -27,14 +51,30 @@
 
 <script setup lang="ts">
 import { ProjectItems } from 'src/types/project-cards';
-import  VTag from 'src/components/V-Tag.vue'
-import mks from 'src/assets/images/mks.png'
-import beer from 'src/assets/images/beer.png'
-import holambra from 'src/assets/images/holambra.jpeg'
-import draNatalia from 'src/assets/images/dra-natalia.jpeg'
-import aladdin from 'src/assets/images/aladdin.jpeg'
+import VTag from 'src/components/V-Tag.vue';
+import mks from 'src/assets/images/mks.png';
+import beer from 'src/assets/images/beer.png';
+import holambra from 'src/assets/images/holambra.jpeg';
+import draNatalia from 'src/assets/images/dra-natalia.jpeg';
+import aladdin from 'src/assets/images/aladdin.jpeg';
+import magicCards from 'src/assets/images/magic-cards.png';
 
 const projectItems: ProjectItems[] = [
+  {
+    title: 'Magic Cards',
+    legend:
+      'Desafio técnico para vaga de desenvolvedor front end, cujo objetivo era fazer integração com a API magicthegathering.io',
+    github: 'https://github.com/juliamchdo/magic-cards',
+    site: 'https://magic-cards-challenge.netlify.app/',
+    image: magicCards,
+    tags: [
+      { text: 'Angular', color: 'red' },
+      { text: 'Typescript', color: 'light-blue' },
+      { text: 'Scss', color: 'pink' },
+      { text: 'HTML', color: 'yellow' },
+      { text: 'Bootstrap', color: 'purple' },
+    ],
+  },
   {
     title: 'Holambra',
     legend: 'Landing page com o intuito de praticar Reactive Forms do Angular.',
@@ -46,7 +86,7 @@ const projectItems: ProjectItems[] = [
       { text: 'Typescript', color: 'light-blue' },
       { text: 'Scss', color: 'pink' },
       { text: 'HTML', color: 'yellow' },
-    ]
+    ],
   },
   {
     title: 'Dra. Natália',
@@ -60,11 +100,12 @@ const projectItems: ProjectItems[] = [
       { text: 'Typescript', color: 'light-blue' },
       { text: 'Scss', color: 'pink' },
       { text: 'HTML', color: 'yellow' },
-    ]
+    ],
   },
   {
     title: 'Aladdin',
-    legend: 'Gerenciador de tarefas desenvolvido para uma disciplina da faculdade.',
+    legend:
+      'Gerenciador de tarefas desenvolvido para uma disciplina da faculdade.',
     github: 'https://github.com/juliamchdo/aladdin-web',
     site: 'https://aladdin-task-manager.netlify.app/',
     image: aladdin,
@@ -78,11 +119,12 @@ const projectItems: ProjectItems[] = [
       { text: 'Prisma', color: 'purple' },
       { text: 'PostgreSQL', color: 'orange' },
       { text: 'Fastify', color: 'purple' },
-    ]
+    ],
   },
   {
     title: 'MKS Sistemas',
-    legend: 'Desafio Front End para consumir uma API de lista de produtos, estilo e-commerce.',
+    legend:
+      'Desafio Front End para consumir uma API de lista de produtos, estilo e-commerce.',
     github: 'https://github.com/juliamchdo/product-challenge',
     site: 'https://mks-product-challenge.netlify.app/',
     image: mks,
@@ -95,7 +137,8 @@ const projectItems: ProjectItems[] = [
   },
   {
     title: 'BeerShop',
-    legend: 'Com muito carinho, esse foi o primeiro site que desenvolvi, logo que comecei a estudar programação.',
+    legend:
+      'Com muito carinho, esse foi o primeiro site que desenvolvi, logo que comecei a estudar programação.',
     github: 'https://github.com/juliamchdo/cervejaria',
     site: 'https://juliamchdo.github.io/cervejaria/',
     image: beer,
@@ -104,7 +147,7 @@ const projectItems: ProjectItems[] = [
       { text: 'CSS', color: 'light-blue' },
     ],
   },
-]
+];
 </script>
 
 <style lang="scss" scoped>
@@ -112,7 +155,7 @@ const projectItems: ProjectItems[] = [
   height: 150px !important;
 }
 
-.q-card{
+.q-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,12 +172,12 @@ const projectItems: ProjectItems[] = [
     border: 1px solid #3f3f41;
     background-color: #3f3f41;
 
-    .tags{
+    .tags {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
-      gap: .5rem;
+      gap: 0.5rem;
       margin-top: 1rem;
     }
 
