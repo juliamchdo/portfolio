@@ -44,15 +44,12 @@ const imgSource: string = props?.icon || '';
   .flat {
     font-weight: 700;
   }
-
   .default {
     color: #8234e9;
   }
-
   .white {
     color: white;
   }
-
   .teal-button {
     width: 10rem;
     display: flex;
@@ -74,7 +71,6 @@ const imgSource: string = props?.icon || '';
       height: 48px;
     }
   }
-
   .teal-button:hover {
     transition: all 0.5s;
     background-color: #8234e9;
