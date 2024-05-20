@@ -19,6 +19,7 @@
           type="teal"
           :label="tech.name"
           :icon="tech.icon"
+          :alt-image="tech.name"
         />
       </div>
     </div>

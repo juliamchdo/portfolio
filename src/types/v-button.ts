@@ -4,4 +4,5 @@ export interface ButtonProps {
   type: string;
   label?: string;
   color?: string;
+  altImage?: string;
 }

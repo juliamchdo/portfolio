@@ -22,7 +22,7 @@
     />
 
     <button v-if="props.type === 'teal'" class="teal-button">
-      <img class="icon-image" :src="imgSource" />
+      <img class="icon-image" :src="imgSource" :alt="props.altImage" />
       <p>{{ props.label }}</p>
     </button>
   </div>
@@ -32,7 +32,7 @@
 import { ButtonProps } from 'src/types/v-button';
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-  color: 'default'
+  color: 'default',
 });
 const imgSource: string = props?.icon || '';
 </script>
@@ -45,11 +45,11 @@ const imgSource: string = props?.icon || '';
     font-weight: 700;
   }
 
-  .default{
+  .default {
     color: #8234e9;
   }
 
-  .white{
+  .white {
     color: white;
   }
 

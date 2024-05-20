@@ -27,6 +27,7 @@
       </div>
     </div>
     <iframe
+      title="scrollAnimation"
       class="scroll-animation"
       src="https://lottie.host/embed/9637ba47-3cbc-40bd-801f-5b24b77142f5/4Pk9BnPGtZ.json"
     ></iframe>
@@ -48,7 +49,7 @@ const buttonProps: ButtonProps[] = [
 const navItems: NavItems[] = [
   { label: 'Sobre mim', id: 'about-me' },
   { label: 'Tecnologias', id: 'technologies' },
-  { label: 'Projetos', id: 'projects' }
+  { label: 'Projetos', id: 'projects' },
 ];
 
 const scrollToView = (navItem: NavItems) => {
@@ -78,9 +79,9 @@ const scrollToView = (navItem: NavItems) => {
   }
 
   @media screen and (max-width: 480px) {
-    .navigation{
-     flex-wrap: wrap;
-     justify-content: center;
+    .navigation {
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 0;
     }
   }
